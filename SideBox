@@ -1,0 +1,54 @@
+//css
+#sideBox{
+  display:none;
+}
+#collection-535a69b5e4b00ed190a0f155{
+  #sideBox{
+    width:180px;
+    height:240px;
+    background-color: #262528;
+    top:550px;
+    right:0%;
+    z-index: 5000;
+    position:absolute;
+    display:block;
+  }
+
+  #sideBox span{
+    position: relative;
+    display: block;
+    text-align:center;
+    margin-top:20px;
+  }
+
+  #sideBox a{
+    display: block;
+    position: relative;
+    text-align:center;
+    margin-top:20px;
+  }
+
+  #sideBoxHR{
+    border-top-width: 3px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+//js
+
+<script>
+  var div = document.createElement('div');
+  div.id = 'sideBox';
+  window.onload = function(){
+    var x = document.getElementById("canvas");
+    x.insertBefore(div, x.childNodes[0]);
+    div.innerHTML = '
+    <span id="sideBoxTextOne">NAMED A BEST PLANNER</span>
+    <a id="sideBoxTextTwo" href="#">&#8212 read article &#8212</a>
+    <span id="sideBoxTextThree"><hr id="sideBoxHR"></hr></span>
+    <span id="sideBoxTextFour">AND A TOP PLANNER</span>
+    <a id="sideBoxTextFive" href="#">&#8212 read article &#8212</a>';
+  }
+  
+</script>
