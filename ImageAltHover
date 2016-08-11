@@ -1,0 +1,26 @@
+#portfolio{
+  //alt img start 1
+  .Index-gallery-inner:nth-of-type(1) .Index-gallery-item:nth-of-type(1) .Index-gallery-item-inner .Index-gallery-item-image {
+  background-image: url(http://static1.squarespace.com/static/579292f72994ca01a4620b1f/t/57ac4582e3df28ba2ea03af4/1470907778926/placeholder.jpg);
+  background-size:cover;
+  background-position: center; 
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;}
+   //alt img end 1
+  
+  //default overides start›
+  .Index-gallery-item:hover .Index-gallery-item-image img{
+  opacity: 1 !important;}
+  .Index-gallery-item-image img{
+  display: block;
+  position: absolute;
+  top: 0; bottom:0; left: 0; right:0;
+  margin: auto;}
+  .Index-gallery-item-inner .Index-gallery-item-image:hover img{
+  opacity: 0 !important;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;}
+  //default overides end
+}
