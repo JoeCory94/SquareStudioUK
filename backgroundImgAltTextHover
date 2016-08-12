@@ -1,0 +1,112 @@
+//rollover images
+
+html{
+  height:100%;
+}
+body{
+  height:100%;
+}
+
+#container{
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.bgImg1{
+  background-image: url("http://static1.squarespace.com/static/5519fc09e4b0e8322a92e9a3/t/57aca34ec534a59cdf2c466b/1470931793219/Screen+Shot+2016-08-11+at+17.08.43.png");
+  background-size:cover;
+  background-position: center;
+}
+
+.bgImg2{
+  background-image: url("http://static1.squarespace.com/static/5519fc09e4b0e8322a92e9a3/t/57aca354c534a59cdf2c4694/1470931806292/Screen+Shot+2016-08-11+at+17.09.17.png");
+  background-size:cover;
+  background-position: center;
+}
+
+#bottomBar{
+  -webkit-transition: none;
+}
+
+body{
+  position:absolute;
+  opacity: 1;
+  width:100%;
+   transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
+}
+#navigator{
+  height:100%;
+  opacity: 1;
+   //transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
+}
+
+#bottomBar{
+  opacity: 1;
+   transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
+}
+
+#topBar{
+  opacity: 1;
+   transition: opacity 1s ease-in-out !important;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
+}
+
+#navigator .siteTitle{
+opacity: 1 !important;
+  z-index: 1;
+} 
+
+
+//js
+
+ var div = document.createElement('div');
+  div.id = 'bgImg';
+  
+  
+  
+window.onload = function(){
+  
+  var body = document.getElementById("collection-568ac29cb204d5442c4dfe6b");
+  var navigator = document.getElementById("navigator");
+  var topBar = document.getElementById("topBar");
+  var bottomBar = document.getElementById("bottomBar");
+  
+  var x = document.getElementById("container-content");
+  var y = x.getElementsByTagName('a');
+  
+  y[0].onmouseover=function(){
+  body.className += " bgImg1";
+  navigator.style.opacity = "0";
+  topBar.style.opacity = "0";
+  bottomBar.style.opacity = "0";
+  }
+  
+  y[0].onmouseout=function(){
+  body.className -= " bgImg1";
+  navigator.style.opacity = "1";
+  topBar.style.opacity = "1";
+  bottomBar.style.opacity = "1";
+  }
+  
+  y[1].onmouseover=function(){
+  body.className += " bgImg2";
+  navigator.style.opacity = "0";
+  topBar.style.opacity = "0";
+  bottomBar.style.opacity = "0";
+  }
+  
+  y[1].onmouseout=function(){
+  body.className -= " bgImg2";
+  navigator.style.opacity = "1";
+  topBar.style.opacity = "1";
+  bottomBar.style.opacity = "1";
+  }
+  
+}
